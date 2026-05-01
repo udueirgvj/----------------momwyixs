@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تيرمين</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { background: #17212b; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  
+<script>
+(function(){
+  var _M={"index.html":"blob:https://udueirgvj.github.io/32400b03-644e-4fe4-b806-0a074bb3f5b4","public/index.html":"blob:https://udueirgvj.github.io/32400b03-644e-4fe4-b806-0a074bb3f5b4"};
+  function _go(href){
+    if(!href||href.startsWith('#')||href.startsWith('http')||href.startsWith('blob:')||href.startsWith('javascript:'))return false;
+    var fn=href.split('/').pop().split('?')[0];
+    var url=_M[href]||_M[fn]||_M[fn.replace(/\.htm$/,'.html')];
+    if(url){window.location.href=url;return true;}
+    return false;
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href]');
+    if(!a)return;
+    if(_go(a.getAttribute('href')))e.preventDefault();
+  },true);
+  document.addEventListener('submit',function(e){
+    var action=e.target.getAttribute('action');
+    if(action&&_go(action))e.preventDefault();
+  },true);
+})();
+</script></body>
+</html>
